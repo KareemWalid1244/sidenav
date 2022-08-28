@@ -1,0 +1,17 @@
+<app-header></app-header>
+<h1>Types</h1>
+
+<mat-card>
+  <form [formGroup]="Typesform"  (ngSubmit)="onSubmit()" >
+    <div class="fld">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input formControlName="NameC" matInput placeholder="Name" />
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" class="green" type="submit">
+    Add
+  </button>
+</form>
+</mat-card>
+<app-footer></app-footer>

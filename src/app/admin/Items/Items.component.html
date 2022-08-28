@@ -1,0 +1,33 @@
+<app-header></app-header>
+<h1>Items</h1>
+
+<mat-card>
+  <form [formGroup]="Itemsform"  (ngSubmit)="onSubmit()" >
+  <div class="fld">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" formControlName="name"/>
+    </mat-form-field>
+  </div>
+  <div class="fld">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Type Name</mat-label>
+      <mat-select formControlName="type" >
+        <mat-option *ngFor="let name of arr" [value]="name.typeID">
+        {{ name.name }}
+       </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="fld">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Paper Number</mat-label>
+      <input matInput placeholder="Balance" formControlName="papersCount" />
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" class="green" routerLink="/Home">
+    Add
+  </button>
+</form>
+</mat-card>
+<app-footer></app-footer>

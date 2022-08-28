@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Are you sure you want to logout?</h2>
+
+<mat-dialog-content>
+    <p>Logging out will redirect you to the login screen.</p>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button style="margin-right: 1rem; background-color: #3db166;" class="mat-raised-button" color="green" (click)="logout()" (click)="close()">Yes</button>
+    <button style="background-color: red;" class="mat-raised-button" (click)="close()">No</button>
+
+
+</mat-dialog-actions>

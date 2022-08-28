@@ -1,0 +1,51 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1b2945;
+  color: white;
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+}
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #1b2945;
+  color: white;
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+}
+img{
+  width: 150px;
+  height: 150px;
+}
+mat-card{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+.img{
+  text-align: center;
+  
+}
+.fld{
+  text-align: center;
+}
+.fldmar{
+  margin-top: 20px;
+}
+.green{
+  background-color: #3db166;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+  text-align: center;
+}
+.btn{
+  text-align: center;
+}

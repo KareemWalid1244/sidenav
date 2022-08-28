@@ -1,0 +1,29 @@
+.nav {
+  text-align: center;
+  margin-top: 10px;
+}
+.navs {
+  text-align: center;
+  margin-top: 40px;
+}
+.green {
+  background-color: #3db166;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.btn {
+  margin-left: 45px;
+}
+.red {
+  background-color: red;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.green-itm {
+  background-color: #3db166;
+  margin-right: 50px;
+  margin-left: 30px;
+  margin-top: 20px;
+}

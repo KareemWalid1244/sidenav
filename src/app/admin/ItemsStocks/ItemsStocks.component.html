@@ -1,0 +1,37 @@
+<app-header></app-header>
+<h1>Items stocks</h1>
+
+<mat-card>
+  <form [formGroup]="ItemsStocksform"  (ngSubmit)="onSubmit()" >
+  <div class="fld">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Stock</mat-label>
+      <mat-select formControlName="Stock" >
+        <mat-option *ngFor="let Stock of arrstc" [value]="Stock.stockID">
+        {{ Stock.name }}
+       </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="fld">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Item</mat-label>
+      <mat-select formControlName="Item" >
+        <mat-option *ngFor="let Item of arritm" [value]="Item.itemsID">
+        {{ Item.name }}
+       </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="fld">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Order Number</mat-label>
+      <input formControlName="OrderNo"  matInput placeholder="Order Number" />
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" class="green">
+    Add
+  </button>
+</form>
+</mat-card>
+<app-footer></app-footer>

@@ -1,0 +1,26 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #1b2945;
+    color: white;
+    text-align: center;
+    font-family: "Cairo", sans-serif;
+  }
+  
+ 
+  
+  .div1,
+  .div2 {
+    display: inline-block;
+  }
+.div2{
+  float: right;
+}
+.div1{
+  justify-content: space-around;
+  align-items: center;
+margin-left: 180px;
+;}
+  
