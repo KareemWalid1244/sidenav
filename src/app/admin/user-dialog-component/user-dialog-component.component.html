@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Pick a user</h2>
+
+<mat-dialog-content>
+    <form [formGroup]="formGroup">
+        <mat-form-field>
+          <mat-label>
+            User
+          </mat-label>
+          <input formControlName="user" matInput type="text" [matAutocomplete]="auto" />
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let item of filteredOptions; let i = index" [value]="item.name">
+              {{item.name}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button style="margin-right: 1rem; background-color: #3db166; color: white;" class="mat-raised-button" color="green" (click)="close()">Pick</button>
+
+</mat-dialog-actions>

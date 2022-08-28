@@ -1,10 +1,11 @@
 <app-header></app-header>
-<body><h1>Hello, Admin</h1>
+<body>
+  
+<h1>Hello, {{arrusr}}</h1>
 <div class="card">
   <mat-card
     ><h4>
-      Hello, Welcome to the MUST Ink system, Here you can adjust a lot of
-      different items related to printing.
+      Hello, Welcome to the MUST Ink system. Here you can keep track of diffrent orders and stock usage!
     </h4></mat-card
   >
 </div>
@@ -55,6 +56,14 @@
       Types
     </button>
       
+    <button
+    mat-raised-button
+    color="primary"
+    class="green"
+    routerLink="/admin/admin/Norder"
+  >
+    New order
+  </button>
      
     </div>
   </mat-card>

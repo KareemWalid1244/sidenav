@@ -25,6 +25,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select'
 import {MatIconModule} from '@angular/material/icon';
+import { OrdersComponent } from "./orders/orders.component";
+import {MatTableModule} from '@angular/material/table';
+import { NorderComponent } from './norder/norder.component';1
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatSelectSearchModule } from 'mat-select-search';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+import {MatDialogModule} from "@angular/material/dialog";
+import { UserDialogComponentComponent } from './user-dialog-component/user-dialog-component.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+
+
 
 
 @NgModule({
@@ -34,14 +45,17 @@ import {MatIconModule} from '@angular/material/icon';
     HomeComponent,
     ItemsComponent,
     ItemsStocksComponent,
-
+    OrdersComponent,
     AdminComponent,
     FooterComponent,
     stockComponent,
     LogoutComponent,
     HeaderComponent,
     TypesComponent,
-
+    NorderComponent,
+    UserDialogComponentComponent,
+    StatisticsComponent,
+    
 
   ],
   imports: [
@@ -56,6 +70,11 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     MatSelectModule,
     MatIconModule,
+    MatTableModule,
+    MatAutocompleteModule,
+    MatSelectSearchModule,
+    NgxMatSelectSearchModule,
+    MatDialogModule,
   ],
   providers: [],
 })

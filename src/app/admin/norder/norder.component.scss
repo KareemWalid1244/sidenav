@@ -1,0 +1,71 @@
+mat-card {
+    margin-top: 15px;
+  }
+  .fld {
+    margin-top: 10px;
+  }
+  .green {
+    background-color: #3db166;
+    float: right;
+    text-align: center;
+    margin-right: 5px;
+  }
+  
+ .user{
+  display: flex;
+ }
+ .tyit{
+  display: inline-flex;
+ }
+
+ .stco{
+  display: flex;
+ }
+ .item{
+  margin-left: 40px;
+ }
+ .type{
+  margin-right: 40px;
+ }
+ .count{
+  margin-left: 40px;
+ }
+ .stock{
+  margin-right: 40px;
+ }
+.gren{
+  background-color: #3db166;
+  margin-left: 80px;
+float: right;
+
+}
+// .button{
+//   margin-left: 360px ;
+// }
+// .bt{
+//   margin-left: 1150px;
+//   float: right;
+
+// }
+.rd {
+       color: rgba(0, 0, 0, 0.14);
+  }
+  ::ng-deep .mat-form-field-readonly {
+    .mat-form-field-wrapper {
+      .mat-form-field-flex {
+        .mat-form-field-outline {
+          .mat-form-field-outline-start {
+            background-color: rgba(127, 127, 127, 0.25) !important;
+          }
+  
+          .mat-form-field-outline-gap {
+            background-color: rgba(127, 127, 127, 0.25) !important;
+          }
+  
+          .mat-form-field-outline-end {
+            background-color: rgba(127, 127, 127, 0.25) !important;
+          }
+        }
+      }
+    }
+  }

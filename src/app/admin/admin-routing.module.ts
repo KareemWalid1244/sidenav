@@ -9,6 +9,10 @@ import { ItemsStocksComponent } from "../admin/ItemsStocks/ItemsStocks.component
 import { AdminComponent } from "./admin.component";
 import { HeaderComponent } from "../header/header.component";
 import { LoginComponent } from "../auth-components/login/login.component";
+import { OrdersComponent } from "./orders/orders.component";
+import { NorderComponent } from "./norder/norder.component";
+import { StatisticsComponent } from "./statistics/statistics.component";
+
 const routes: Routes = [
   {
     path: "",
@@ -32,6 +36,10 @@ const routes: Routes = [
       { path: "Logout", component: LogoutComponent },
       { path: "Header", component: HeaderComponent },
       { path: "Logout", component: LogoutComponent },
+      { path: "Orders", component:OrdersComponent },
+      { path: "Norder", component: NorderComponent },
+      { path: "Statistics", component: StatisticsComponent },
+
 
      
     ],

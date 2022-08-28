@@ -1,0 +1,77 @@
+<app-header></app-header>
+<h1>New order</h1>
+<mat-card>
+  <form [formGroup]="Norderform" (ngSubmit)="onSubmit()">
+    <div class="usr">
+      <form [formGroup]="formGroup">
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>
+          User
+        </mat-label>
+        <input formControlName="user" matInput type="text" [matAutocomplete]="auto" />
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let item of filteredOptions" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      </form>
+    </div>
+
+    <div class="tyit">
+      <div class="type">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Type</mat-label>
+          <mat-select (valueChange)="loadItems($event)" formControlName="type">
+            <mat-option  *ngFor="let type of arrtyp" [value]="type.typeID">
+              {{ type.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="item">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Item</mat-label>
+          <mat-select formControlName="item">
+            <mat-option *ngFor="let Item of arritm" [value]="Item.itemsID">
+              {{ Item.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      
+       
+      
+    </div>
+    <button
+    mat-raised-button
+    color="primary"
+    class="green"
+    type="submit"
+    (click)="noti()"
+  >
+    Add
+  </button>
+    <div class="stco">
+      <div class="stock">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Stock</mat-label>
+          <mat-select formControlName="stock">
+            <mat-option *ngFor="let stock of arrstc" [value]="stock.stockID">
+              {{ stock.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="count">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Current paper count</mat-label>
+          <input formControlName="count" matInput placeholder="count" />
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</mat-card>
+<app-footer></app-footer>

@@ -11,7 +11,10 @@ export class DialogBodyComponent implements OnInit {
 
   constructor( public dialogRef: MatDialogRef<DialogBodyComponent>,  private route:Router ) { }
   logout(){
-
+    sessionStorage.removeItem('userID');
+    sessionStorage.removeItem('name');
+    sessionStorage.removeItem('empID');
+    sessionStorage.removeItem('job');
     this.route.navigate(['/']);
     }
   close() {

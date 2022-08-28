@@ -27,13 +27,19 @@ export const navbarData = [
   },
   {
     routeLink: "Orders",
-    icon: "fa fa-print",
-    label: "Printers",
+    icon: "fa fa-shopping-cart",
+    label: "All orders",
   },
   
-  // //{
-  //   routeLink: "Logout",
-  //   icon: "fa fa-sign-out",
-  //   label: "Logout",
-  // },//
+  {
+     routeLink: "Norder",
+     icon: "fa fa-shopping-cart",
+     label: "New Order",
+   },
+
+   {
+    routeLink: "Statistics",
+    icon: "fas fa-chart-bar",
+    label: "Statistics",
+  }
 ];

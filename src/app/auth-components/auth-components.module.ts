@@ -8,6 +8,10 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule }   from '@angular/forms';
+
+
 
 
 
@@ -24,8 +28,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCardModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
-
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,  
 
 
   ]

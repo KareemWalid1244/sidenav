@@ -1,46 +1,81 @@
 import { HttpClient } from '@angular/common/http';
+import { Conditional } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import {
+  UntypedFormBuilder,
+  UntypedFormControl,
+  FormGroup,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-Items',
   templateUrl: './Items.component.html',
-  styleUrls: ['./Items.component.scss']
+  styleUrls: ['./Items.component.scss'],
 })
 export class ItemsComponent implements OnInit {
-  Itemsform!: UntypedFormGroup;
-  arr!:any[];
-  onSubmit(){
-    let type ={
-      name:this.Itemsform.controls['name'].value,
-      typesID:this.Itemsform.controls['type'].value,
-      papersCount:this.Itemsform.controls['papersCount'].value
-    }
-    console.log(type)
-     this.http.post('https://localhost:44369/api/Items/AddItems',type )
-     .subscribe((result: any)=>{
-     
-     })}
-     selectedNE = new UntypedFormControl();
-     names: string[] = ['Angular', 'Reactjs', 'Vue'];
-     selectedIT = new UntypedFormControl();
-     Items: string[] = ['Angular', 'Reactjs', 'Vue'];
-     
-  constructor(private fb:UntypedFormBuilder, private http:HttpClient) {
-    this.Itemsform  = this.fb.group({
-      name:['',Validators.required],
-      type:[0,Validators.required],
-      papersCount:['',Validators.required]
-     });
-   }
+  Itemsform: FormGroup;
+  arr!: any[];
+  arrusr!:any;
+       
+  constructor(fb: FormBuilder, private http: HttpClient, private route:Router) {
+    this.Itemsform = fb.group({
+      name: ['', Validators.required],
+      typeName: [0, Validators.required],
+      papersCount: ['', Validators.required],
+    });
+  }
 
   ngOnInit(): void {
     this.loadStocks();
+    if(sessionStorage.getItem('userID') == null || sessionStorage.getItem('userID') == "" || sessionStorage.getItem('userID') == " "){
+      this.route.navigate(['/']);
+     
+    }
+    this.arrusr  = sessionStorage.getItem('name');
   }
-loadStocks(){
-  this.http.get('https://localhost:44369/api/Stock/GetAllStock' )
-  .subscribe((result: any)=>{
-    this.arr = result;
-  
-  })}
+
+  onSubmit(){
+    if(this.Itemsform.controls['name'].value != ""&&  this.Itemsform.controls['typeName'].value != ""&& this.Itemsform.controls['papersCount'].value != ""){
+      let type ={
+          name:this.Itemsform.controls['name'].value,
+          typesID:this.Itemsform.controls['typeName'].value,
+          papersCount:this.Itemsform.controls['papersCount'].value
+        
+        }
+        this.http.post('https://localhost:44369/api/Items/AddItems',type )
+        .subscribe((result: any)=>{
+          console.warn("result",result)
+          if(result==true)
+          {
+            alert("Item details added succedfully")
+          }
+          else{
+            alert("Item details wasn't added, Please try again")
+
+          }
+        })
+        console.log(this.Itemsform.controls['NameC'].value
+        
+        )
+    }
+    else{
+      alert("Please fill in all input boxes")
+
+    }
+    
+
+  }
+
+  loadStocks() {
+    this.http
+      .get('https://localhost:44369/api/Types/GetAllTypes')
+      .subscribe((result: any) => {
+        this.arr = result;
+      });
+  }
+  noti(){
+  }
 }

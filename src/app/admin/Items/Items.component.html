@@ -9,10 +9,10 @@
       <input matInput placeholder="Name" formControlName="name"/>
     </mat-form-field>
   </div>
-  <div class="fld">
+ <div class="fld">
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Type Name</mat-label>
-      <mat-select formControlName="type" >
+      <mat-label>Type</mat-label>
+      <mat-select  formControlName="typeName" >
         <mat-option *ngFor="let name of arr" [value]="name.typeID">
         {{ name.name }}
        </mat-option>
@@ -21,11 +21,11 @@
   </div>
   <div class="fld">
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Paper Number</mat-label>
-      <input matInput placeholder="Balance" formControlName="papersCount" />
+      <mat-label>Paper Count</mat-label>
+      <input matInput placeholder="Paper Count" formControlName="papersCount" type="number" min="0" step="1" />
     </mat-form-field>
   </div>
-  <button mat-raised-button color="primary" class="green" routerLink="/Home">
+  <button mat-raised-button color="primary" class="green" (click)="noti()">
     Add
   </button>
 </form>

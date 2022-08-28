@@ -8,6 +8,7 @@ import { stockComponent } from '../admin/Stock/stock.component';
 import { AuthComponentsComponent } from './auth-components.component';
 import { LoginComponent } from './login/login.component';
 import { TypesComponent } from "../admin/Types/types.component";
+import { OrdersComponent } from '../admin/orders/orders.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,8 @@ const routes: Routes = [
       { path: "Logout", component: LogoutComponent },
       { path: "Types", component: TypesComponent },
 { path: "Logout", component: LogoutComponent },
+{ path: "Orders", component:OrdersComponent }
+
  
 ];
 
