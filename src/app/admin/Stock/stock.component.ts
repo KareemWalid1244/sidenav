@@ -36,6 +36,8 @@ export class stockComponent implements OnInit {
       alert("Please fill in all input boxes")
 
     }
+    this.Stocksform.reset();
+
     
 
   }

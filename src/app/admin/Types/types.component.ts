@@ -38,7 +38,8 @@ export class TypesComponent implements OnInit {
       alert("Please fill in all input boxes")
 
     }
-    
+    this.Typesform.reset()
+
 
   }
   constructor(private route:Router, private fb:UntypedFormBuilder, private http:HttpClient) { 

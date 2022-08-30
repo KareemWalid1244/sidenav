@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
               alert(result.name); 
             }
 
+
       //     if(!this.loginForm.valid){
           
       //   this.router.navigate(['/home'])
@@ -63,7 +64,9 @@ export class LoginComponent implements OnInit {
       // else{
       // }
       // localStorage.setItem('user',this.loginForm.value)
-      })};
+      })
+      this.loginForm.reset()
+    };
     
   }
 

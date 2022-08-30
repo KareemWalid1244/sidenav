@@ -14,6 +14,7 @@ export class ItemsStocksComponent implements OnInit {
 
   arritm!:any[];
   onSubmit(){
+
     if(this.ItemsStocksform.controls['Stock'].value && this.ItemsStocksform.controls['Item'].value && this.ItemsStocksform.controls['balance'].value != ""){
       let type ={
         stockID:this.ItemsStocksform.controls['Stock'].value,
@@ -38,7 +39,8 @@ export class ItemsStocksComponent implements OnInit {
       alert("Please fill in all input boxes")
 
     }
-    
+    this.ItemsStocksform.reset();
+
 
   }
   selectedST = new UntypedFormControl();

@@ -38,6 +38,7 @@ export class ItemsComponent implements OnInit {
   }
 
   onSubmit(){
+
     if(this.Itemsform.controls['name'].value != ""&&  this.Itemsform.controls['typeName'].value != ""&& this.Itemsform.controls['papersCount'].value != ""){
       let type ={
           name:this.Itemsform.controls['name'].value,
@@ -66,6 +67,7 @@ export class ItemsComponent implements OnInit {
 
     }
     
+    this.Itemsform.reset();
 
   }
 

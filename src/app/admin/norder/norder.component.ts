@@ -35,6 +35,7 @@ export class NorderComponent implements OnInit {
 
   arritm!:any[];
   onSubmit(){
+
     this.arrusr.forEach(element => {
 
 
@@ -72,6 +73,7 @@ export class NorderComponent implements OnInit {
 
     }
     
+    this.Norderform.reset();
 
   }
 
